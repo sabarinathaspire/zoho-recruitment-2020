@@ -1,0 +1,36 @@
+  public static void PrintWord(string word)
+        {
+            char[] wordArr = word.ToCharArray();
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                Print(wordArr, word.Length/2, i);
+                System.Console.WriteLine();
+            }                       
+        }
+
+        private static void Print(char [] wordArr,int start,int end)
+        {
+            int space = wordArr.Length - end;
+
+            for (int j = 0; j < space; j++)
+            {
+                System.Console.Write(" ");
+            }
+
+            int i = 0;
+
+            while(i<=end)
+            {
+                if (start + i > wordArr.Length-1)
+                {
+                    System.Console.Write(wordArr[start + i - wordArr.Length]);
+                }
+                else
+                {
+                    System.Console.Write(wordArr[start+i]);
+                }
+                i++;
+            }
+
+        }
