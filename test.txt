@@ -11,7 +11,7 @@
 
         private static void Print(char [] wordArr,int start,int end)
         {
-            int space = wordArr.Length - end;
+            int space = wordArr.Length - end -1;
 
             for (int j = 0; j < space; j++)
             {
